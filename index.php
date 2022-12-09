@@ -92,7 +92,19 @@
 		            	<li class="d-flex"><span>Name:</span> <span>Ronald Sianipar</span></li>
 		            	<li class="d-flex"><span>Age:</span> 
 							<span>
-								
+								<?php
+									$tanggal_lahir = new DateTime("2003-06-26");
+									$sekarang = new DateTime("today");
+									if ($tanggal_lahir > $sekarang) { 
+									$thn = "0";
+									$bln = "0";
+									$tgl = "0";
+									}
+									$thn = $sekarang->diff($tanggal_lahir)->y;
+									$bln = $sekarang->diff($tanggal_lahir)->m;
+									$tgl = $sekarang->diff($tanggal_lahir)->d;
+									echo $thn." Years old";
+								?>
 							</span>
 						</li>
 		            	<li class="d-flex"><span>Linkedin:</span> <span><a href="https://linkedin.com/in/ronald-sianipar" target="_blank">linkedin.com/in/ronald-sianipar</a></span></li>
