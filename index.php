@@ -90,7 +90,7 @@
 		            <h2 class="mb-4">About Me</h2>
 		            <ul class="about-info mt-4 px-md-0 px-2">
 		            	<li class="d-flex"><span>Name:</span> <span>Ronald Sianipar</span></li>
-		            	<li class="d-flex"><span>Age:</span> 
+		            	{{--<li class="d-flex"><span>Age:</span> 
 							<span>
 								<?php
 									$tanggal_lahir = new DateTime("2003-06-26");
@@ -106,7 +106,7 @@
 									echo $thn." Years old";
 								?>
 							</span>
-						</li>
+						</li>--}}
 		            	<li class="d-flex"><span>Linkedin:</span> <span><a href="https://linkedin.com/in/ronald-sianipar" target="_blank">linkedin.com/in/ronald-sianipar</a></span></li>
 		            	<li class="d-flex"><span>Email:</span> <span><a href="mailto:ronaldsianypar@gmail.com" target="_blank">ronaldsianypar@gmail.com</a></span></li>
 		            </ul>
