@@ -234,6 +234,9 @@ caption {
     caption-side: bottom;
 }
 
+.noborder {
+    border: unset !important;
+}
 th {
     text-align: inherit;
 }
@@ -12069,6 +12072,7 @@ h5,
 @media (max-width: 767.98px) {
     .project .overlay {
         opacity: .2;
+        background: unset !important;
     }
 }
 
@@ -12425,7 +12429,7 @@ textarea.form-control {
 .img,
 .blog-img,
 .user-img {
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
 }
