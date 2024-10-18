@@ -11606,6 +11606,8 @@ h5,
     width: 100%;
     position: relative;
     z-index: 1;
+    width: 55%;
+    margin-left: 15%;
 }
 
 .ftco-about ul.about-info {
