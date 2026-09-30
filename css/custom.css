@@ -1,0 +1,839 @@
+/* =========================================================
+   CUSTOM CSS
+   ========================================================= */
+
+
+/* =========================================================
+   1. DOWNLOAD CV BUTTON
+   ========================================================= */
+
+   .btn-download-cv {
+    position: relative;
+    display: inline-block;
+    padding: 12px 28px;
+
+    background: #ffbd39;
+    color: #000 !important;
+
+    font-weight: 600;
+    border-radius: 50px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.btn-download-cv:hover {
+    transform: translateY(-3px);
+    color: #000 !important;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn-download-cv::after {
+    content: "NEW";
+
+    position: absolute;
+    top: -10px;
+    right: -10px;
+
+    padding: 3px 7px;
+
+    background: #dc3545;
+    color: #fff;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   2. ABOUT / PROFILE IMAGE
+   ========================================================= */
+
+.img-about {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.profile-image {
+    width: 75%;
+    max-width: 350px;
+    height: auto;
+
+    display: block;
+}
+
+
+/* =========================================================
+   3. PROJECT
+   Desktop:
+   - Image normal
+   - Overlay/text muncul saat hover
+
+   Mobile:
+   - Image tetap bersih
+   - Info project selalu muncul di bawah
+   ========================================================= */
+
+@media (max-width: 767.98px) {
+
+    .project .overlay {
+        opacity: 0 !important;
+        background: transparent !important;
+    }
+
+    .project .text {
+        opacity: 1;
+
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        width: 100%;
+        max-width: 100%;
+
+        padding: 14px 16px;
+
+        background: rgba(62, 100, 255, 0.92);
+
+        text-align: left;
+        z-index: 2;
+    }
+
+    .project .text h3 {
+        margin-bottom: 5px;
+        font-size: 17px;
+    }
+
+    .project .text h3 a {
+        color: #fff !important;
+    }
+
+    .project .text span {
+        color: rgba(255, 255, 255, 0.85);
+
+        font-size: 9px;
+        letter-spacing: 1.5px;
+    }
+
+}
+
+
+/* =========================================================
+   4. CONTACT
+   ========================================================= */
+
+/* Contact title */
+
+.contact-section .heading-section h2 {
+    color: #fff !important;
+
+    text-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+
+/* Contact card */
+
+.contact-card {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    color: #fff !important;
+    text-decoration: none !important;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+
+/* Card title */
+
+.contact-card h3 {
+    color: #fff !important;
+}
+
+
+/* Card description / username / email */
+
+.contact-card p {
+    margin-bottom: 0;
+
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+
+/* Remove default anchor styling */
+
+.contact-card:hover,
+.contact-card:focus,
+.contact-card:active {
+    color: #fff !important;
+    text-decoration: none !important;
+}
+
+
+/* Desktop hover */
+
+.contact-card:hover {
+    transform: translateY(-6px);
+
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.contact-card:hover p {
+    color: #fff !important;
+}
+
+
+/* =========================================================
+   5. MOBILE
+   ========================================================= */
+
+@media (max-width: 767.98px) {
+
+    /* -----------------------------------------
+       ABOUT
+       ----------------------------------------- */
+
+    .ftco-about .img-about {
+        height: auto;
+        min-height: 0;
+
+        margin-bottom: 25px;
+    }
+
+    .profile-image {
+        width: 220px;
+        max-width: 70%;
+    }
+
+
+    /* -----------------------------------------
+       CONTACT SECTION
+       ----------------------------------------- */
+
+    .contact-section {
+        padding-top: 30px !important;
+        padding-bottom: 25px !important;
+    }
+
+
+    /* 3 contact cards in one row */
+
+    .contact-info {
+        display: flex;
+        flex-wrap: nowrap;
+
+        margin-left: -5px;
+        margin-right: -5px;
+    }
+
+
+    /* Actual HTML:
+       col-md-6 col-lg-3
+    */
+
+    .contact-info > div {
+        width: 33.333333%;
+        max-width: 33.333333%;
+        flex: 0 0 33.333333%;
+
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+
+    /* Contact card */
+
+    .contact-card {
+        padding: 15px 5px !important;
+    }
+
+
+    /* Icon */
+
+    .contact-card .icon {
+        width: 52px;
+        height: 52px;
+
+        margin: 0 auto 10px;
+
+        font-size: 18px;
+    }
+
+
+    /* Title */
+
+    .contact-card h3 {
+        margin-bottom: 6px !important;
+
+        font-size: 11px;
+    }
+
+
+    /* Username / email */
+
+    .contact-card p {
+        font-size: 8px;
+        line-height: 1.3;
+
+        word-break: break-word;
+    }
+
+
+    /* -----------------------------------------
+       REMOVE UNUSED CONTACT BLOCK ON MOBILE
+       ----------------------------------------- */
+
+    #contact-section .block-9 {
+        display: none;
+    }
+
+
+    /* Contact spacing */
+
+    #contact-section .contact-info {
+        margin-bottom: 20px !important;
+    }
+
+
+    /* -----------------------------------------
+       FOOTER
+       ----------------------------------------- */
+
+    .ftco-footer {
+        padding: 35px 0 30px !important;
+    }
+
+    .ftco-footer .row.mb-5 {
+        margin-bottom: 0 !important;
+    }
+
+    .ftco-footer .ftco-footer-widget {
+        margin-bottom: 0 !important;
+    }
+
+    .ftco-footer .ftco-heading-2 {
+        margin-bottom: 15px !important;
+
+        font-size: 16px;
+    }
+
+    .ftco-footer-social {
+        margin-top: 0 !important;
+    }
+
+}
+
+/* FLOATING CV BUTTON */
+.floating-cv {
+    position: fixed;
+    right: 25px;
+    bottom: 50px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    /* background: #F96D00; */
+    background: #3e64ff;
+    color: #fff !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-decoration: none !important;
+    z-index: 9999;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+}
+
+.floating-cv .icon-file-text {
+    font-size: 18px;
+    line-height: 1;
+    margin-bottom: 2px;
+}
+
+.floating-cv-text {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.floating-cv:hover {
+    color: #fff !important;
+    background: #e85f00;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 767.98px) {
+    .floating-cv {
+        right: 15px;
+        bottom: 15px;
+        width: 52px;
+        height: 52px;
+    }
+
+    .floating-cv .icon-file-text {
+        font-size: 16px;
+    }
+
+    .floating-cv-text {
+        font-size: 12px;
+    }
+}
+
+/* =========================================
+   CERTIFICATE SECTION
+========================================= */
+
+.certificate-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.certificate-row {
+    row-gap: 35px;
+}
+
+.certificate-row > div {
+    margin-bottom: 0 !important;
+}
+
+.certificate-card {
+    width: 100%;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.certificate-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.14);
+}
+
+
+/* IMAGE */
+
+.certificate-image {
+    width: 100%;
+    height: 250px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px;
+
+    background: #f8f9fa;
+}
+
+.certificate-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    object-position: center;
+
+    display: block;
+
+    transition: transform 0.3s ease;
+}
+
+.certificate-card:hover .certificate-image img {
+    transform: scale(1.03);
+}
+
+
+/* TITLE */
+
+.certificate-info {
+    padding: 18px 20px 20px;
+    min-height: 85px;
+
+    display: flex;
+    align-items: center;
+}
+
+.certificate-info h3 {
+    margin: 0;
+
+    font-size: 18px;
+    line-height: 1.45;
+
+    font-weight: 600;
+
+    color: #111;
+}
+
+.certificate-info h3:hover {
+    color: #3e64ff;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767.98px) {
+
+    .certificate-section {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .certificate-row {
+        row-gap: 25px;
+    }
+
+    .certificate-image {
+        height: 220px;
+        padding: 12px;
+    }
+
+    .certificate-info {
+        padding: 14px 15px 16px;
+        min-height: auto;
+    }
+
+    .certificate-info h3 {
+        font-size: 15px;
+        line-height: 1.4;
+    }
+}
+
+/* =====================================================
+   MODERN PROJECT PORTFOLIO
+===================================================== */
+
+.portfolio-projects {
+    padding-top: 90px;
+    padding-bottom: 100px;
+    background: #fff;
+}
+
+
+/* SECTION TITLE */
+
+.portfolio-projects .heading-section {
+    position: relative;
+}
+
+.portfolio-label {
+    display: inline-block;
+    margin-bottom: 10px;
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+
+    color: #3e64ff;
+}
+
+.portfolio-projects .heading-section h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #111;
+}
+
+.portfolio-projects .heading-section p {
+    max-width: 550px;
+    margin: 15px auto 0;
+
+    font-size: 15px;
+    line-height: 1.8;
+
+    color: #777;
+}
+
+
+/* GRID */
+
+.portfolio-grid {
+    margin-left: -12px;
+    margin-right: -12px;
+}
+
+.portfolio-item {
+    padding: 12px;
+}
+
+
+/* CARD */
+
+.project-card {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    background: #fff;
+
+    border-radius: 14px;
+
+    text-decoration: none !important;
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.07);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.13);
+}
+
+
+/* IMAGE */
+
+.project-image {
+    position: relative;
+
+    width: 100%;
+    height: 230px;
+
+    overflow: hidden;
+
+    background: #f5f6f8;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition:
+        transform 0.5s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.06);
+}
+
+
+/* HOVER OVERLAY */
+
+.project-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(62, 100, 255, 0.78);
+
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-overlay span {
+    padding: 10px 18px;
+
+    border: 1px solid rgba(255,255,255,0.8);
+    border-radius: 50px;
+
+    color: #fff;
+
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+
+/* PROJECT INFO */
+
+.project-info {
+    min-height: 92px;
+
+    padding: 18px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+.project-category {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #3e64ff;
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+}
+
+.project-info h3 {
+    margin: 0;
+
+    color: #111;
+
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.4;
+
+    transition: color 0.25s ease;
+}
+
+.project-card:hover .project-info h3 {
+    color: #3e64ff;
+}
+
+
+/* ARROW */
+
+.project-arrow {
+    flex-shrink: 0;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #f1f3ff;
+
+    color: #3e64ff;
+
+    font-size: 18px;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.project-card:hover .project-arrow {
+    background: #3e64ff;
+    color: #fff;
+
+    transform: rotate(45deg);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 991.98px) {
+
+    .portfolio-projects {
+        padding-top: 70px;
+        padding-bottom: 80px;
+    }
+
+    .project-image {
+        height: 220px;
+    }
+
+    .portfolio-projects .heading-section h2 {
+        font-size: 34px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 767.98px) {
+
+    .portfolio-projects {
+        padding-top: 55px;
+        padding-bottom: 60px;
+    }
+
+    .portfolio-grid {
+        margin-left: -8px;
+        margin-right: -8px;
+    }
+
+    .portfolio-item {
+        padding: 8px;
+    }
+
+    .portfolio-projects .heading-section h2 {
+        font-size: 30px;
+    }
+
+    .portfolio-projects .heading-section p {
+        font-size: 13px;
+        padding: 0 15px;
+    }
+
+    .project-image {
+        height: 210px;
+    }
+
+    /*
+       MOBILE:
+       No hover needed.
+       Image stays clean.
+    */
+
+    .project-overlay {
+        display: none;
+    }
+
+    .project-info {
+        min-height: 80px;
+        padding: 14px 15px;
+    }
+
+    .project-info h3 {
+        font-size: 15px;
+    }
+
+    .project-category {
+        font-size: 8px;
+        letter-spacing: 1.4px;
+    }
+
+    .project-arrow {
+        width: 34px;
+        height: 34px;
+        font-size: 16px;
+    }
+}
