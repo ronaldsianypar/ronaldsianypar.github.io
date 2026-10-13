@@ -3,7 +3,7 @@ const toCache = [
 	"/",
 	"js/web.webmanifest",
 	"js/register.js",
-	"img/icon.png",
+	"images/profile/logo-1-nobg.png",
 ];
 
 self.addEventListener("install", function (event) {
