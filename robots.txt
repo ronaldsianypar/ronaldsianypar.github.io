@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ronaldsianypar.my.id/sitemap.xml
